@@ -36,9 +36,33 @@ body {
   text-align: justify;
 }
 
+/* Projects Styling Section */
+
+#projects {
+  background-color: #eee;
+  min-height: 1020px;
+}
+#projects h2 {
+  margin: 20px;
+  text-align: center;
+}
+#projects a {
+  position: relative;
+  bottom: 10px;
+  padding: 33%;
+}
+
+.project {
+  background-color: white;
+  margin: 10px;
+  min-height: 250px;
+}
+.project img {
+  width: 100%; /* width setting here is 100% of parent */
+}
 
 
-/* responsive media queries */
+/* responsive media queries- Make changes here for ipads/desktops */
 
 /* For mobile phones: */
 [class*="col-"] {
@@ -69,6 +93,12 @@ body {
     .title {
       font-size: 2.5em;
       }
+    .project h2, a { /*here your changing the heading & anchor tag font size */
+      font-size: 2em; /* 2em = 2 x the existing size of font in body */
+    }  
+    #projects { /* Can't see grey background on ipad display, so increased min-height */
+      min-height: 1850px; 
+    }
     
   }
   @media only screen and (min-width: 769px) {
@@ -94,5 +124,14 @@ body {
     }
     #profile p {
       font-size: 1.2em;
+    }
+    .project img {
+      min-height: 300px;
+    }
+    .project h2, a {
+      font-size: 1.1em;
+    }
+    #projects {
+      min-height: 550px;
     }
   }
